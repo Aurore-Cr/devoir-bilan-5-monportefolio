@@ -1,28 +1,53 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
 function Header() {
   return (
-    <header className="App-header">
-      <h1>JOHN DOE</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">HOME</Link>
-          </li>
-          <li>
-            <Link to="/services">SERVICES</Link>
-          </li>
-          <li>
-            <Link to="/portefolio">PORTFOLIO</Link>
-          </li>
-          <li>
-            <Link to="/contact">CONTACT</Link>
-          </li>
-          <li>
-            <Link to="/mentions">MENTIONS</Link>
-          </li>
-        </ul>
-      </nav>
+    <header className="text-white text-uppercase sticky-top">
+      <Navbar expand="lg" className="bg-dark py-0 " data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand className="navbar-expand-lg text-light" href="/">
+            John Doe
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarResponsive" />
+          <Navbar.Collapse id="navbarResponsive">
+            <Nav className="navbar-nav ms-auto">
+              <Nav.Link
+                className="nav-link py-0 px-0 px-lg-3 rounded text-light"
+                href="/"
+              >
+                Home
+              </Nav.Link>
+              <Nav.Link
+                className="nav-link py-0 px-0 px-lg-3 rounded text-light"
+                href="/services"
+              >
+                Services
+              </Nav.Link>
+              <Nav.Link
+                className="nav-link py-0 px-0 px-lg-3 rounded text-light"
+                href="/portefolio"
+              >
+                Portfolio
+              </Nav.Link>
+              <Nav.Link
+                className="nav-link py-0 px-0 px-lg-3 rounded text-light"
+                href="/contact"
+              >
+                Contact
+              </Nav.Link>
+              <Nav.Link
+                className="nav-link py-0 px-0 px-lg-3 rounded text-light"
+                href="/mentions"
+              >
+                Mentions Légales
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </header>
   );
 }
