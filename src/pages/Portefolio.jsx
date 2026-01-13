@@ -1,4 +1,4 @@
-import BasicExample from "../components/BootStrap";
+import BasicExample from "../components/Bootstrap";
 import React from "react";
 
 function Portefolio() {
