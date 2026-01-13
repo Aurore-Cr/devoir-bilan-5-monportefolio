@@ -7,6 +7,7 @@ import Services from "./pages/Services";
 import Portefolio from "./pages/Portefolio";
 import Contact from "./pages/Contact";
 import Mentions from "./pages/Mentions";
+import Modal from "./components/Modal";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/portefolio" element={<Portefolio />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/mentions" element={<Mentions />} />
+            <Route path="/modal" element={<Modal />} />
           </Routes>
         </main>
         <Footer />
