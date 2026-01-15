@@ -1,29 +1,48 @@
-import Card from "react-bootstrap/Card";
-/* 
+import React from "react";
+
 const Prestations = () => {
   return (
-    <div>
-      {Contenu des prestations }
-      <h1>Contenu des prestations</h1>
-      <p>Voici les prestations sur lesquelles je peux intervenir</p>
+    <div class="card">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="..." />
+
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card’s content.
+          </p>
+          <a href="#" class="btn btn-primary">
+            Go somewhere
+          </a>
+        </div>
+      </div>
+
+      <div class="card" aria-hidden="true">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title placeholder-glow">
+            <span class="placeholder col-6"></span>
+          </h5>
+          <p class="card-text placeholder-glow">
+            <span class="placeholder col-7"></span>
+            <span class="placeholder col-4"></span>
+            <span class="placeholder col-4"></span>
+            <span class="placeholder col-6"></span>
+            <span class="placeholder col-8"></span>
+          </p>
+          <a
+            class="btn btn-primary disabled placeholder col-6"
+            aria-disabled="true"
+            href=""
+          >
+            {" "}
+            test
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
-*/
-
-function Prestations() {
-  return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-      </Card.Body>
-    </Card>
-  );
-}
 
 export default Prestations;

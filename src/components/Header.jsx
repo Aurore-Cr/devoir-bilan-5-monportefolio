@@ -5,10 +5,10 @@ import Navbar from "react-bootstrap/Navbar";
 
 function Header() {
   return (
-    <header className="text-white text-uppercase sticky-top">
-      <Navbar expand="lg" className="bg-dark py-0 " data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand className="navbar-expand-lg text-light" href="/">
+    <header className=" text-light text-uppercase sticky-top">
+      <Navbar expand="lg" className="bg-dark py-0  " data-bs-theme="dark">
+        <Container fluid className="px-4 me-1 px-lg-4 ">
+          <Navbar.Brand className="navbar-expand-lg text-light " href="/">
             John Doe
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarResponsive" />
