@@ -1,30 +1,33 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Portefolio from "./pages/Portefolio";
+import Contact from "./pages/Contact";
+import Mentions from "./pages/Mentions";
+import Modal from "./components/Modal";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      {/* Other components and content can go here */}
-      <main>
-        <h1>My Portfolio</h1>
-        <nav>
-          <ul>
-            <li>
-              <a href="#about">About Me</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        {/* Other components and content can go here */}
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/portefolio" element={<Portefolio />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/mentions" element={<Mentions />} />
+            <Route path="/modal" element={<Modal />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
