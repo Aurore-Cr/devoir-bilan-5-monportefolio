@@ -13,7 +13,7 @@ function Header() {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarResponsive" />
           <Navbar.Collapse id="navbarResponsive">
-            <Nav className="navbar-nav ms-auto ">
+            <Nav className="navbar-nav ms-auto">
               <Nav.Link
                 className="nav-link py-0 px-0 px-lg-3 rounded text-light"
                 href="/"
