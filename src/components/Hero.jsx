@@ -14,7 +14,10 @@ const Hero = () => {
       </h1>
       <h2 className="bg-dark text-xl mt-2">Développeur web full stack</h2>
       <Button variant="danger hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4 transition-transform duration-300 hover:scale-105">
-        <a href="/src/components/Modal.jsx" className="text-white no-underline">
+        <a
+          href="/src/components/Modal.jsx"
+          className="text-white no-underline text-decoration-none "
+        >
           En savoir plus
         </a>
       </Button>
