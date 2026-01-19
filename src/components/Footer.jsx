@@ -4,22 +4,19 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light content-center mt-5 px-4 lg:px-lg-5">
-      <div className="container mx-auto px-4 lg:px-lg-5 fs-6 py-5">
-        <div className="row gx-4 gy-3 mb-4">
-          <div className="col-12 col-md-4 mb-4 mb-md-0">
+    <footer className="bg-dark text-light  mt-5 ">
+      <div className="container py-5">
+        <div className="row gy-4">
+          <div className="col-12 col-md-4 ">
             {/* bloc 1 */}
 
-            <h5 className="">John Doe</h5>
-            <ul className="list-unstyled  mb-0">
-              <li className="adress"> 40 rue Laure Diebold</li>
-              <li className="postal"> 69009 Lyon, France</li>
-              <li className="phone"> 10 20 30 40 50</li>
-              <li className="mail">
-                <a
-                  href="mailto:john.doe@example.com"
-                  className="text-light text-decoration-none hover:underline"
-                >
+            <h5 className="fw-semibold">John Doe</h5>
+            <ul className="list-unstyled  small">
+              <li> 40 rue Laure Diebold</li>
+              <li> 69009 Lyon, France</li>
+              <li> 10 20 30 40 50</li>
+              <li>
+                <a href="mailto:john.doe@example.com" className="footer-link">
                   john.doe@gmail.com
                 </a>
               </li>
@@ -27,83 +24,67 @@ const Footer = () => {
 
             {/* Icônes des réseaux sociaux */}
 
-            <ul className="d-flex list-unstyled  gap-2">
-              <li className="d-flex ">
-                <a
-                  href="https://github.com/github-john-doe"
-                  className="text-secondary p-0 rounded hover:bg-secondary hover:bg-opacity-25"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                >
-                  <i className="bi bi-github fs-2"></i>
-                </a>
-              </li>
+            <div className="d-flex gap-3 mt-2">
+              <a
+                href="https://github.com/github-john-doe"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="social-icon"
+              >
+                <i className="bi bi-github fs-4"></i>
+              </a>
+
               <li className="d-flex ">
                 <a
                   href="https://twitter.com/johndoe"
-                  className="text-secondary p-0 rounded  hover:bg-secondary hover:bg-opacity-25"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
+                  className="social-icon"
                 >
-                  <i className="bi bi-twitter fs-2"></i>
+                  <i className="bi bi-twitter fs-4"></i>
                 </a>
               </li>
 
               <li className="d-flex ">
                 <a
                   href="https://linkedin.com/in/johndoe"
-                  className="text-secondary p-0 rounded  hover:bg-secondary hover:bg-opacity-25"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
+                  className="social-icon"
                 >
-                  <i className="bi bi-linkedin fs-2"></i>
+                  <i className="bi bi-linkedin fs-4"></i>
                 </a>
               </li>
-            </ul>
+            </div>
           </div>
 
           {/* bloc 2 */}
 
-          <div className="col-12 col-md-4 mb-4 mb-md-0">
-            <h5 className="">Liens utiles</h5>
-            <ul className="list-unstyled mb-0 ">
+          <div className="col-12 col-md-4">
+            <h5 className="fw-semibold">Liens utiles</h5>
+            <ul className="list-unstyled ">
               <li>
-                <Link
-                  to="/"
-                  className="text-light text-decoration-none hover:text-light-50 hover:underline"
-                >
+                <Link to="/" className="footer-link">
                   Accueil
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/Services"
-                  className="text-light text-decoration-none hover:underline"
-                >
+                <Link to="/Services" className="footer-link">
                   Services
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/Portefolio"
-                  className="text-light text-decoration-none hover:underline"
-                >
+                <Link to="/Portfolio" className="footer-link">
                   Portefolio
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/Contact"
-                  className="text-light text-decoration-none hover:underline"
-                >
+                <Link to="/Contact" className="footer-link">
                   Me contacter
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/Mentions"
-                  className="text-light text-decoration-none hover:underline"
-                >
+                <Link to="/Mentions" className="footer-link">
                   Mentions légales
                 </Link>
               </li>
@@ -112,54 +93,36 @@ const Footer = () => {
 
           {/* bloc 3 */}
 
-          <div className="col-12 col-md-4 mb-4 mb-md-0">
-            <h5 className="">Mes dernières réalisations</h5>
-            <ul className="list-unstyled mb-0">
+          <div className="col-12 col-md-4 ">
+            <h5 className="fw-semibold">Mes dernières réalisations</h5>
+            <ul className="list-unstyled">
               <li>
-                <Link
-                  to="/Portefolio"
-                  className="text-light text-decoration-none hover:text-light-50 hover:underline"
-                >
+                <Link to="/Portfolio" className="footer-link">
                   Fresh Food
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/Portefolio"
-                  className="text-light text-decoration-none hover:text-light-50 hover:underline"
-                >
+                <Link to="/Portfolio" className="footer-link">
                   Restaurant Akira
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/Portefolio"
-                  className="text-light text-decoration-none hover:underline"
-                >
+                <Link to="/Portfolio" className="footer-link">
                   Espace bien-être
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/Portefolio"
-                  className="text-light text-decoration-none hover:underline"
-                >
+                <Link to="/Portfolio" className="footer-link">
                   SEO
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/Portefolio"
-                  className="text-light text-decoration-none hover:underline"
-                >
+                <Link to="/Portfolio" className="footer-link">
                   Création d'une API
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/Portefolio"
-                  className="text-light text-decoration-none hover:underline"
-                >
+                <Link to="/Portfolio" className="footer-link">
                   Maquette d'un site
                 </Link>
               </li>

@@ -46,22 +46,23 @@ const Project = ({ title }) => {
   if (!project) return null;
   return (
     <Card className="project-card h-100">
-      <Card.Img variant="top" src={project.imgUrl} className="project-img" />
+      <div className="project-card">
+        <Card.Img variant="top" src={project.imgUrl} className="project-img" />
+        <Card.Body className="text-center">
+          <Card.Title as="h4">{project.title}</Card.Title>
 
-      <Card.Body className="text-center">
-        <Card.Title as="h4">{project.title}</Card.Title>
+          <Card.Text>
+            <p>{project.description}</p>
+          </Card.Text>
 
-        <Card.Text>
-          <p>{project.description}</p>
-        </Card.Text>
-
-        <Button variant="primary" className="project-btn mb-3">
-          Voir le site
-        </Button>
-      </Card.Body>
-      <Card.Footer className="text-center text-muted">
-        {project.footer}
-      </Card.Footer>
+          <Button variant="primary" className="project-btn mb-3">
+            Voir le site
+          </Button>
+        </Card.Body>
+        <Card.Footer className="text-center text-muted">
+          {project.footer}
+        </Card.Footer>{" "}
+      </div>
     </Card>
   );
 };

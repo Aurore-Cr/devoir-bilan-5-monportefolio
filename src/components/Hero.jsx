@@ -1,27 +1,30 @@
-import React from "react";
-import { Button } from "react-bootstrap";
+import { useState } from "react";
+import { Button, Container } from "react-bootstrap";
+import GithubModal from "../components/Modal";
 
 const Hero = () => {
+  const [show, setShow] = useState(false);
+
   return (
-    <section className=" text-white text-center">
-      <img
-        className="bg-dark img-fluid w-100 h-30 object-center opacity-50"
-        src="./assets/img/hero-bg.jpg"
-        alt="Hero"
-      />
-      <h1 className=" bg-dark text-4xl font-bold mt-4">
-        Bonjour, je suis John Doe
-      </h1>
-      <h2 className="bg-dark text-xl mt-2">Développeur web full stack</h2>
-      <Button variant="danger hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4 transition-transform duration-300 hover:scale-105">
-        <a
-          href="/src/components/Modal.jsx"
-          className="text-white no-underline text-decoration-none "
-        >
-          En savoir plus
-        </a>
-      </Button>
-    </section>
+    <>
+      <section className="hero-section text-white d-flex align-items-center text-center">
+        <Container>
+          <h1 className="display-4 fw-bold">Bonjour, je suis John Doe</h1>
+          <h2 className="fw-bold mt-3">Développeur web full stack</h2>
+
+          <Button
+            variant="danger"
+            className="mt-4 px-4"
+            onClick={() => setShow(true)}
+          >
+            En savoir plus
+          </Button>
+        </Container>
+      </section>
+
+      <GithubModal show={show} handleClose={() => setShow(false)} />
+    </>
   );
 };
+
 export default Hero;
