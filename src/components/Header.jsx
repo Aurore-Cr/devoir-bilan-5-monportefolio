@@ -1,48 +1,56 @@
-import React from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 function Header() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
-    <header className=" text-light text-uppercase sticky-top">
-      <Navbar expand="lg" className="bg-dark py-0  " data-bs-theme="dark">
-        <Container fluid className="px-4 me-1 px-lg-4 ">
-          <Navbar.Brand className="navbar-expand-lg text-light " href="/">
+    <header className="sticky-top text-uppercase">
+      <Navbar bg="dark" variant="dark" expand="lg" expanded={expanded}>
+        <Container fluid className="px-4 px-lg-5">
+          <Navbar.Brand as={NavLink} to="/" onClick={() => setExpanded(false)}>
             John Doe
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarResponsive" />
-          <Navbar.Collapse id="navbarResponsive">
-            <Nav className="navbar-nav ms-auto">
+
+          <Navbar.Toggle onClick={() => setExpanded(!expanded)} />
+          <Navbar.Collapse>
+            <Nav className="ms-auto ">
               <Nav.Link
-                className="nav-link py-0 px-0 px-lg-3 rounded text-light"
-                href="/"
+                as={NavLink}
+                to="/"
+                end
+                onClick={() => setExpanded(false)}
               >
                 Home
               </Nav.Link>
               <Nav.Link
-                className="nav-link py-0 px-0 px-lg-3 rounded text-light"
-                href="/services"
+                as={NavLink}
+                to="/services"
+                onClick={() => setExpanded(false)}
               >
                 Services
               </Nav.Link>
               <Nav.Link
-                className="nav-link py-0 px-0 px-lg-3 rounded text-light"
-                href="/portefolio"
+                as={NavLink}
+                to="/portfolio"
+                onClick={() => setExpanded(false)}
               >
                 Portfolio
               </Nav.Link>
               <Nav.Link
-                className="nav-link py-0 px-0 px-lg-3 rounded text-light"
-                href="/contact"
+                as={NavLink}
+                to="/contact"
+                onClick={() => setExpanded(false)}
               >
                 Contact
               </Nav.Link>
               <Nav.Link
-                className="nav-link py-0 px-0 px-lg-3 rounded text-light"
-                href="/mentions"
+                as={NavLink}
+                to="/mentions"
+                onClick={() => setExpanded(false)}
               >
-                Mentions Légales
+                Mentions légales
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -51,4 +59,5 @@ function Header() {
     </header>
   );
 }
+
 export default Header;

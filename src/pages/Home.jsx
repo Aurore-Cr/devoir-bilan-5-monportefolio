@@ -1,14 +1,13 @@
 import Hero from "../components/Hero";
 import About from "../components/About";
 
-function Home() {
+const Home = () => {
   return (
-    <div className="Home">
-      <main>
-        <Hero />
-        <About />
-      </main>
-    </div>
+    <>
+      <Hero />
+      <About />
+    </>
   );
-}
+};
+
 export default Home;

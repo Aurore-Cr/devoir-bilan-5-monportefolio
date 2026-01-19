@@ -1,30 +1,24 @@
 import ProgressBar from "react-bootstrap/ProgressBar";
 
-function Competence() {
+const Competence = () => {
   return (
-    <div className="text-uppercase p-4 bg-light rounded-3">
-      <div className="mb-4 ">
-        <h3 className="fs-6">html5 90%</h3>
-        <ProgressBar variant="danger" now={90} />
-      </div>
-      <div className="mb-4">
-        <h3 className="fs-6">css3 80%</h3>
-        <ProgressBar variant="info" now={80} />
-      </div>
-      <div className="mb-4">
-        <h3 className="fs-6">javascript 70%</h3>
-        <ProgressBar variant="warning" now={70} />
-      </div>
-      <div className="mb-4">
-        <h3 className="fs-6">php 60%</h3>
-        <ProgressBar variant="success" now={60} />
-      </div>
-      <div className="mb-4">
-        <h3 className="fs-6">react 50%</h3>
-        <ProgressBar variant="primary" now={50} />
-      </div>
-    </div>
+    <>
+      <p className="mb-1">HTML5 90%</p>
+      <ProgressBar variant="danger" now={90} className="mb-2" />
+
+      <p className="mb-1">CSS3 80%</p>
+      <ProgressBar variant="info" now={80} className="mb-2" />
+
+      <p className="mb-1">JavaScript 70%</p>
+      <ProgressBar variant="warning" now={70} className="mb-2" />
+
+      <p className="mb-1">PHP 60%</p>
+      <ProgressBar variant="success" now={60} className="mb-2" />
+
+      <p className="mb-1">React 50%</p>
+      <ProgressBar variant="primary" now={50} />
+    </>
   );
-}
+};
 
 export default Competence;
